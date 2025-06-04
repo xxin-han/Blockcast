@@ -1,5 +1,3 @@
-version: "3.8"
-
 x-service: &service
   image: blockcast/cdn_gateway_go:${IMAGE_VERSION:-stable}
   restart: unless-stopped
