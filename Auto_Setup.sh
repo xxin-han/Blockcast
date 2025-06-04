@@ -1,14 +1,11 @@
 #!/bin/bash
-set -e
 
-# Warna
 ORANGE='\033[38;5;208m'
 GREEN='\033[0;32m'
 CYAN='\033[0;36m'
 YELLOW='\033[0;33m'
 NC='\033[0m'
 
-# Fungsi banner center text (optional)
 center_text() {
   term_width=$(tput cols)
   text="$1"
@@ -17,44 +14,59 @@ center_text() {
   printf "%*s%s\n" $padding "" "$text"
 }
 
-# Fungsi logging
-LOGFILE="script.log"
-echo_log() {
-    echo -e "$(date '+%Y-%m-%d %H:%M:%S') - $1" | tee -a "$LOGFILE"
-}
-
-# Clear layar
 clear
 
-# Banner art
 echo -e "${ORANGE}"
-echo "                                                                                                         "
-echo "                    XXXXXXX       XXXXXXX  iiii                         999999999          888888888     "
-echo "                    X:::::X       X:::::X i::::i                      99:::::::::99      88:::::::::88   "
-echo "                    X:::::X       X:::::X  iiii                     99:::::::::::::99  88:::::::::::::88 "
-echo "                    X::::::X     X::::::X                          9::::::99999::::::98::::::88888::::::8"
-echo "xxxxxxx      xxxxxxxXXX:::::X   X:::::XXXiiiiiii nnnn  nnnnnnnn    9:::::9     9:::::98:::::8     8:::::8"
-echo " x:::::x    x:::::x    X:::::X X:::::X   i:::::i n:::nn::::::::nn  9:::::9     9:::::98:::::8     8:::::8"
-echo "  x:::::x  x:::::x      X:::::X:::::X     i::::i n::::::::::::::nn  9:::::99999::::::9 8:::::88888:::::8 "
-echo "   x:::::xx:::::x        X:::::::::X      i::::i nn:::::::::::::::n  99::::::::::::::9  8:::::::::::::8  "
-echo "    x::::::::::x         X:::::::::X      i::::i   n:::::nnnn:::::n    99999::::::::9  8:::::88888:::::8 "
-echo "     x::::::::x         X:::::X:::::X     i::::i   n::::n    n::::n         9::::::9  8:::::8     8:::::8"
-echo "     x::::::::x        X:::::X X:::::X    i::::i   n::::n    n::::n        9::::::9   8:::::8     8:::::8"
-echo "    x::::::::::x    XXX:::::X   X:::::XXX i::::i   n::::n    n::::n       9::::::9    8:::::8     8:::::8"
-echo "   x:::::xx:::::x   X::::::X     X::::::Xi::::::i  n::::n    n::::n      9::::::9     8::::::88888::::::8"
-echo "  x:::::x  x:::::x  X:::::X       X:::::Xi::::::i  n::::n    n::::n     9::::::9       88:::::::::::::88 "
-echo " x:::::x    x:::::x X:::::X       X:::::Xi::::::i  n::::n    n::::n    9::::::9          88:::::::::88   "
-echo "xxxxxxx      xxxxxxxXXXXXXX       XXXXXXXiiiiiiii  nnnnnn    nnnnnn   99999999             888888888     "
-echo "                                                                                                         "
+echo "                                                                                                         ";
+echo "                                                                                                         ";
+echo "                    XXXXXXX       XXXXXXX  iiii                         999999999          888888888     ";
+echo "                    X:::::X       X:::::X i::::i                      99:::::::::99      88:::::::::88   ";
+echo "                    X:::::X       X:::::X  iiii                     99:::::::::::::99  88:::::::::::::88 ";
+echo "                    X::::::X     X::::::X                          9::::::99999::::::98::::::88888::::::8";
+echo "xxxxxxx      xxxxxxxXXX:::::X   X:::::XXXiiiiiii nnnn  nnnnnnnn    9:::::9     9:::::98:::::8     8:::::8";
+echo " x:::::x    x:::::x    X:::::X X:::::X   i:::::i n:::nn::::::::nn  9:::::9     9:::::98:::::8     8:::::8";
+echo "  x:::::x  x:::::x      X:::::X:::::X     i::::i n::::::::::::::nn  9:::::99999::::::9 8:::::88888:::::8 ";
+echo "   x:::::xx:::::x        X:::::::::X      i::::i nn:::::::::::::::n  99::::::::::::::9  8:::::::::::::8  ";
+echo "    x::::::::::x         X:::::::::X      i::::i   n:::::nnnn:::::n    99999::::::::9  8:::::88888:::::8 ";
+echo "     x::::::::x         X:::::X:::::X     i::::i   n::::n    n::::n         9::::::9  8:::::8     8:::::8";
+echo "     x::::::::x        X:::::X X:::::X    i::::i   n::::n    n::::n        9::::::9   8:::::8     8:::::8";
+echo "    x::::::::::x    XXX:::::X   X:::::XXX i::::i   n::::n    n::::n       9::::::9    8:::::8     8:::::8";
+echo "   x:::::xx:::::x   X::::::X     X::::::Xi::::::i  n::::n    n::::n      9::::::9     8::::::88888::::::8";
+echo "  x:::::x  x:::::x  X:::::X       X:::::Xi::::::i  n::::n    n::::n     9::::::9       88:::::::::::::88 ";
+echo " x:::::x    x:::::x X:::::X       X:::::Xi::::::i  n::::n    n::::n    9::::::9          88:::::::::88   ";
+echo "xxxxxxx      xxxxxxxXXXXXXX       XXXXXXXiiiiiiii  nnnnnn    nnnnnn   99999999             888888888     ";
+echo "                                                                                                         ";
+echo "                                                                                                         ";
+echo "                                                                                                         ";
+echo "                                                                                                         ";
+echo "                                                                                                         ";
+echo "                                                                                                         ";
+echo "                                                                                                         ";
+echo "                                                                                                         ";
 echo -e "${NC}"
+
 
 echo -e "${YELLOW}🚀 Welcome to the xXin98 Setup Script!${NC}"
 echo -e "${CYAN}🐦 Follow us on Twitter: @xXin98 ${NC}"
 
+
 sleep 5
+
+#!/bin/bash
+
+#!/bin/bash
+
+# Log file name
+LOGFILE="script.log"
+
+# Function to log messages with timestamp
+echo_log() {
+    echo -e "$(date '+%Y-%m-%d %H:%M:%S') - $1" | tee -a "$LOGFILE"
+}
 
 echo_log "🕒 Script started at $(date '+%H:%M:%S')..."
 
+# Update and upgrade system
 echo_log "📦 Updating and upgrading the system..."
 sudo apt update && sudo apt upgrade -y
 
@@ -132,33 +144,36 @@ echo_log "✅ Verifying Go installation..."
 go version
 
 echo_log "🔗 Installing RUST..."
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
-
-echo_log "✅ Verifying Rust installation..."
 rustc --version
 
-echo_log "Installing risczero (rzup)..."
 curl -L https://risczero.com/install | bash
 source "$HOME/.cargo/env"
 
+source "/root/.bashrc"
+
 echo_log "✅ Verifying RZup installation..."
+rzup install
+export PATH="$HOME/.cargo/bin:$PATH"
+source "$HOME/.cargo/env"
+
+echo 'export PATH="$HOME/.cargo/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
 rzup --version
 
 echo_log "✅ Installing Seq..."
-sudo apt install -y coreutils
+apt install -y coreutils
 seq --version
 
 echo_log "✅ Installing Jq..."
-sudo apt install -y jq
+apt install jq
 
 echo_log "✅ Installing Bc..."
-sudo apt install -y bc
+apt install bc
 
 echo_log "✅ Installing Htop..."
-sudo apt install -y htop
-
+apt install htop
 echo_log "✅ Installing PV..."
-sudo apt install -y pv
-
+apt install pv
 echo_log "All processes completed at $(date '+%H:%M:%S')! System is ready to use! 🚀"
