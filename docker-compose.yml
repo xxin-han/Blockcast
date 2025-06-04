@@ -35,10 +35,6 @@ services:
     container_name: beacond
     command: /usr/bin/beacond -logtostderr=true -v=0
 
-  or_bin_proxy:
-    <<: *service
-    container_name: or_bin_proxy
-    command: /usr/bin/or_bin_proxy
 
   watchtower:
     image: containrrr/watchtower
