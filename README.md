@@ -39,7 +39,7 @@ A 6-month Proof of Resources Epoch, rewarding nodes based on their node capacity
    ```bash
    nano .env
 
-   #Change HTTP and HTTPS for your proxy
+   #Change HTTP and HTTPS for your proxy/ if not using proxy you must delete "http://123.456.789.10:3128"
        HTTP_PROXY=http://123.456.789.10:3128
        HTTPS_PROXY=http://123.456.789.10:3128
        NO_PROXY=localhost,127.0.0.1
