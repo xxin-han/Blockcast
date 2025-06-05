@@ -8,7 +8,6 @@ x-service: &service
   labels:
     - "com.centurylinklabs.watchtower.enable=true"
   environment:
-environment:
   - http_proxy=${HTTP_PROXY:-}
   - https_proxy=${HTTPS_PROXY:-}
   - no_proxy=${NO_PROXY:-localhost,127.0.0.1}
@@ -25,9 +24,9 @@ services:
     command: /usr/bin/blockcastd -logtostderr=true -v=0
     network_mode: bridge
     environment:
-      - http_proxy=${HTTP_PROXY}
-      - https_proxy=${HTTPS_PROXY}
-      - no_proxy=${NO_PROXY}
+    - http_proxy=${HTTP_PROXY:-}
+    - https_proxy=${HTTPS_PROXY:-}
+    - no_proxy=${NO_PROXY:-localhost,127.0.0.1}
 
   beacond:
     <<: *service
