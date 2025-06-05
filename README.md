@@ -96,7 +96,6 @@ Make screen :
    ```
  
 Check Log:
-
-    ```bash
-     docker compose logs -fn 1000
-     ```
+   ```bash
+   docker compose logs -fn 1000
+   ```
