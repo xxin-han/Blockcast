@@ -35,7 +35,7 @@ A 6-month Proof of Resources Epoch, rewarding nodes based on their node capacity
    cd Blockcast
    ```
 
-7. Fill proxy list on .env if you using a proxy then save it ctrl + x + y + enter
+5. Fill proxy list on .env if you using a proxy then save it ctrl + x + y + enter
    ```bash
    nano .env
 
@@ -44,11 +44,11 @@ A 6-month Proof of Resources Epoch, rewarding nodes based on their node capacity
        HTTPS_PROXY=http://123.456.789.10:3128
        NO_PROXY=localhost,127.0.0.1
    ```
-7. Run command
+6. Run command
    ```bash
    docker compose up -d
    ```
-8. Stop bot
+7. Stop bot
    ```bash
    docker compose down```
 
@@ -67,6 +67,7 @@ Generate Node Data & Register:
    ```bash
    docker compose exec blockcastd blockcastd init
    ```
-- Copy and paste the '''Registration URL''' from the terminal in browser to open the Dashboard.
+- Copy and paste the ```Registration URL``` from the terminal in browser to open the Dashboard.
 - With your Hardware ID and Challenge Key pre-filled, Fill-in your location from previous command.
 - Register your Node.
+- Wait a few minutes until your node truns Online
