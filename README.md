@@ -51,3 +51,22 @@ A 6-month Proof of Resources Epoch, rewarding nodes based on their node capacity
 8. Stop bot
    ```bash
    docker compose down```
+
+## Register Node
+
+Get location:
+
+   ```bash
+   curl -s https://ipinfo.io | jq '.city, .region, .country, .loc'
+   ```
+if using proxy
+   ```bash
+   curl -s <change your proxy> https://ipinfo.io | jq '.city, .region, .country, .loc'
+   ```
+Generate Node Data & Register:
+   ```bash
+   docker compose exec blockcastd blockcastd init
+   ```
+- Copy and paste the '''Registration URL''' from the terminal in browser to open the Dashboard.
+- With your Hardware ID and Challenge Key pre-filled, Fill-in your location from previous command.
+- Register your Node.
