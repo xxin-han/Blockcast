@@ -72,3 +72,31 @@ Generate Node Data & Register:
 - With your Hardware ID and Challenge Key pre-filled, Fill-in your location from previous command.
 - Register your Node.
 - Wait a few minutes until your node truns Online
+
+## Check Logs
+Make screen :
+   ```bash
+        # make new screen
+        screen -S log
+
+        # Return screen
+        screen -r log
+   
+        # Minimize screen
+        Press: CTRL + A + D
+        
+        # Screens list
+        screen -ls
+        
+        # Stop Node (when inside a screen)
+        Press: Ctrl + C
+        
+        # Kill and Remove Node (when outside a screen)
+        screen -XS log quit
+   ```
+ 
+Check Log:
+
+    ```bash
+   docker compose logs -fn 1000
+   ```
