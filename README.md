@@ -49,4 +49,5 @@ A 6-month Proof of Resources Epoch, rewarding nodes based on their node capacity
    docker compose up -d
    ```
 8. Stop bot
-   ```docker compose down```
+   ```bash
+   docker compose down```
